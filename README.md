@@ -1,7 +1,6 @@
 
 ## Civitai Content Downloader
 
-//![Layer 2](https://github.com/user-attachments/assets/826955dc-a0dc-4f24-b7dd-f11382838dc1)
 <img width="423" height="634" alt="Rectangle 1" src="https://github.com/user-attachments/assets/83d2004d-f1aa-4a68-8053-3e0cf2531148" />
 
 
