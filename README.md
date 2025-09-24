@@ -22,3 +22,15 @@ A convenient tool for bulk downloading videos and/or images from user profiles o
 2.  Enter one or more **usernames** in the top box.
 3.  Configure the **filters, limit, and content types** as desired.
 4.  Click the **"Download"** button.
+
+
+
+
+### The program comes in two versions:
+Self-contained:
+
+  Large file size (~140 MB). Includes the entire .NET runtime. This version works "out of the box" on any modern Windows system with no additional installations required. Recommended for most users.
+
+Framework-dependent:
+
+  Small file size (~200 KB). Requires the .NET Desktop Runtime (version 6.0 or newer) to be installed on the user's system. The application will not launch without it. Suitable for users who already have the .NET runtime installed or wish to save disk space.
