@@ -20,4 +20,4 @@ A convenient tool for bulk downloading videos and/or images from user profiles o
 1.  Paste your **API key** from Civitai.
 2.  Enter one or more **usernames** in the top box.
 3.  Configure the **filters, limit, and content types** as desired.
-4.  Click the **"Download"** button and watch the progress!
+4.  Click the **"Download"** button.
