@@ -1,6 +1,9 @@
 
 ## Civitai Content Downloader
 
+![Layer 2](https://github.com/user-attachments/assets/826955dc-a0dc-4f24-b7dd-f11382838dc1)
+
+
 A convenient tool for bulk downloading videos and/or images from user profiles on Civitai.com.
 
 #### Key Features:
