@@ -11,7 +11,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-// --- IMPORTANT: Make sure you have this using statement ---
+
 using CivitaiVideoDownloader.Properties;
 
 namespace CivitaiVideoDownloader
@@ -56,7 +56,7 @@ namespace CivitaiVideoDownloader
             string[] usernames = usernameBox.Lines.Where(line => !string.IsNullOrWhiteSpace(line)).Select(line => line.Trim()).ToArray();
             string apiKey = apiKeyBox.Text.Trim();
 
-            // --- ИЗМЕНЕНИЕ: Убираем проверку, что юзернейм обязателен ---
+            
             if (string.IsNullOrEmpty(apiKey))
             {
                 MessageBox.Show("Enter API key!");
@@ -81,10 +81,10 @@ namespace CivitaiVideoDownloader
                 overallProgress.Value = 0;
                 overallProgress.Maximum = totalLimit == int.MaxValue ? 100 : totalLimit;
 
-                // --- ИЗМЕНЕНИЕ: Добавляем логику для двух режимов ---
+                
                 if (usernames.Length > 0)
                 {
-                    // РЕЖИМ 1: Скачивание по пользователям
+                    
                     for (int i = 0; i < usernames.Length; i++)
                     {
                         if (totalDownloadedInSession >= totalLimit && limitNumericUpDown.Value != 0)
@@ -103,7 +103,7 @@ namespace CivitaiVideoDownloader
                 }
                 else
                 {
-                    // РЕЖИМ 2: Глобальный поиск по фильтрам
+                    
                     statusLabel.Text = "Starting global search by filters...";
                     Log($"\n▶▶▶ Starting global search by filters ◀◀◀");
                     int count = await DownloadContent(string.Empty, apiKey, totalLimit, cts.Token); // Передаём пустое имя
@@ -143,7 +143,7 @@ namespace CivitaiVideoDownloader
 
             var urlParams = new StringBuilder();
 
-            // --- ИЗМЕНЕНИЕ: username добавляется только если он есть ---
+            
             if (!string.IsNullOrEmpty(username))
             {
                 urlParams.Append($"&username={WebUtility.UrlEncode(username)}");
@@ -166,7 +166,7 @@ namespace CivitaiVideoDownloader
             int newlyDownloaded = 0;
             int processedForLimit = 0;
 
-            // --- ИЗМЕНЕНИЕ: Логика создания папок для обоих режимов ---
+            
             string folderIdentifier;
             if (!string.IsNullOrEmpty(username))
             {
